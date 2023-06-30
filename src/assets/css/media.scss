@@ -1,0 +1,351 @@
+@media screen and (min-width: 320px) {
+  #home {
+    header {
+      text-align: left;
+      padding-left: 30px;
+      background: radial-gradient(transparent, rgba(242, 235, 217) 1px);
+      backdrop-filter: blur(5px);
+      .title {
+        display: block;
+      }
+      #switch {
+        display: none;
+      }
+      .menu {
+        ul {
+          position: fixed;
+          top: 65px;
+          left: -100vw;
+          width: 100vw;
+          height: 100vh;
+          z-index: 3;
+          background: #ffffffe0;
+          backdrop-filter: saturate(180%) blur(6px);
+          transition: left .5s;
+          padding-top: 30px;
+          overflow-y: overlay;
+          background: url('../222.jpg') no-repeat;
+          background-size: cover;
+          li {
+            text-align: center;
+            a {
+              color: #000;
+            }
+          }
+        }
+        #check:checked ~ ul {
+          left: 0;
+        }
+        #check:checked + label .menuIcon{
+          &::before {
+            transform-origin: center center;
+            transform: rotate(45deg) translate(7px, 7px);
+          }
+          i {
+            display: none;
+          }
+          &::after {
+            transform: rotate(-45deg) translate(7px, -7px);
+          }
+        }
+      }
+    }
+    footer.newFooter {
+      display: none;
+    }
+  }
+  #banner {
+    display: none;
+  }
+  #artlist {
+    width: 95%;
+  }
+  #md-editor-v3 {
+    width: 95%;
+    margin: auto;
+    background: var(--home-box-background-color);
+    color: var(--color);
+  }
+  #catalogue {
+    display: none;
+  }
+  body {
+    background: url('../222.jpg');
+    background-size: 100%;
+    background-attachment: fixed;
+  }
+}
+
+
+@media screen and (min-width: 800px) {
+  #home {
+    background-color: var(--background-color);
+    header {
+      text-align: center;
+      background: transparent;
+      backdrop-filter: blur(1px);
+      .title {
+        display: none;
+      }
+      #switch {
+        display: block;
+      }
+      .menu {
+        .menuIcon { 
+          display: none;
+        }
+        ul {
+          position: unset;
+          list-style: none;
+          width: auto;
+          height: 100%;
+          background: transparent;
+          backdrop-filter: unset;
+          padding-top: 0;
+          padding-right: 20px;
+          li {
+            float: left;
+            margin-left: 15px;
+            font-size: 14px;
+            a {
+              color: #fff;
+              text-shadow: 1px 1px 10px #000;
+            }
+          }
+        }
+      }
+    }
+    footer.footer {
+      display: none;
+    }
+    footer.newFooter {
+      display: block;
+    }
+  }
+  #banner {
+    display: block;
+      width: 100%;
+      background: url('https://w.wallhaven.cc/full/we/wallhaven-we63yx.jpg') no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+      .bannerInner {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        color: transparent;
+        background: url('https://w.wallhaven.cc/full/we/wallhaven-we63yx.jpg') no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        background-clip: text;
+        // -webkit-text-stroke: 1px rgba(255, 255, 255, 0.219);
+        font-size: 7em;
+        font-weight: 900;
+        text-align: center;
+        line-height: 100vh;
+        overflow: hidden;
+      }
+    }
+  main {
+    width: auto;
+    background: none;
+  }
+  #artlist {
+    width: 800px;
+  }
+  #artDetail {
+    width: 100%;
+    #md-editor-v3 {
+      width: 95%;
+      margin: auto;
+      // background: var(--home-box-background-color);
+    }
+    #catalogue {
+      display: none;
+    }
+  }
+}
+
+
+@media screen and (min-width: 1280px) {
+  body {
+    background: transparent;
+  }
+  #home {
+    background-color: var(--background-color);
+    header {
+      text-align: center;
+      background: transparent;
+      backdrop-filter: blur(1px);
+      .title {
+        display: none;
+      }
+      #switch {
+        display: block;
+      }
+      .menu {
+        ul {
+          height: 65px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 65px;
+            a {
+              display: inline-block;
+              height: 35px;
+              line-height: 35px;
+              padding: 0 2px;
+              background: linear-gradient(to right, #e86a42, #ca434e) no-repeat right bottom;
+              background-size: 0 2px;
+              transition: background-size 0.5s;
+              &:hover {
+                background-position-x: left;
+                background-size: 100% 2px;
+              }
+              // &::after {
+              //   content: '';
+              //   display: inline-block;
+              //   height: 2px;
+              //   width: 0%;
+              //   position: absolute;
+              //   right: 0;
+              //   bottom: 0;
+              //   background: linear-gradient(to right, #e86a42, #ca434e);
+              //   transition: all 0.3s;
+              // }
+              // &:hover {
+              //   &::after {
+              //     width: 100%;
+              //     left: 0;
+              //     right: unset;
+              //   }
+              // }
+            }
+          }
+        }
+      }
+    }
+    main {
+      width: auto;
+      height: auto;
+      background: none;
+    }
+    footer.footer {
+      display: none;
+    }
+    footer.newFooter {
+      display: block;
+    }
+  }
+  #banner {
+    display: block;
+    width: 100%;
+    background: url('https://w.wallhaven.cc/full/we/wallhaven-we63yx.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    filter: brightness(var(--banner-filter-brightness));
+    .bannerInner {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      color: transparent;
+      background: url('https://w.wallhaven.cc/full/we/wallhaven-we63yx.jpg') no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+      background-clip: text;
+      font-size: 7em;
+      font-weight: 900;
+      text-align: center;
+      line-height: 100vh;
+      overflow: hidden;
+      &::after {
+        content: attr(data-content);
+        position: absolute;
+        inset: 0;
+        background: #fff;
+        background-clip: text;
+        color: transparent;
+        // clip-path: ellipse(100px 100px at 28% 50%);
+        // animation: hd 8s ease-in infinite;
+        // mix-blend-mode: difference;
+      }
+    }
+  }
+  #artlist {
+    width: 1200px;
+  }
+  #artDetail {
+    width: 100%;
+    #md-editor-v3 {
+      width: 880px;
+      margin: unset;
+      // background: var(--home-box-background-color);
+      // color: var(--color);
+    }
+    #catalogue {
+      display: block;
+      width: 300px;
+      z-index: 5;
+      text-align: left;
+      background: transparent;
+      ul {
+        height: 100%;
+        list-style: none;
+        margin: 0;
+        padding: 20px;
+        background: var(--home-box-background-color);
+        margin-bottom: 15px;
+        li {
+          height: 30px;
+          border-radius: 6px;
+          &:hover {
+            background: var(--catalogue-hover-color);
+            a {
+              font-weight: 700;
+            }
+          }
+          a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: var(--color);
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            &[data-level="1"] {
+              padding-left: 10px;
+            }
+            &[data-level="2"] {
+              padding-left: 20px;
+            }
+            &[data-level="3"] {
+              padding-left: 30px;
+            }
+            &[data-level="4"] {
+              padding-left: 40px;
+            }
+            line-height: 30px;
+          }
+        }
+        .active-li {
+          background: var(--catalogue-hover-color);
+          a {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes hd {
+  50% {
+    clip-path: ellipse(100px 100px at 72% 50%);
+  }
+  to {
+    clip-path: ellipse(100px 100px at 28% 50%);
+  }
+}

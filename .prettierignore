@@ -1,0 +1,10 @@
+/dist/* 
+/dist1/*
+/node_modules/** 
+
+**/*.svg
+**/*.sh
+**/*.html
+**/*.scss
+
+/public/* 
