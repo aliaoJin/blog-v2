@@ -89,7 +89,7 @@ const days = ref<number>(0);
 const conditionTotal: any = ref(100);
 const classifyList: any = ref([]);
 const paginationObj = reactive({
-    pageNum: 1,
+    pageNo: 1,
     pageSize: 10,
 });
 const articleType = ref<number | string>(' ');
@@ -130,7 +130,7 @@ const artDetail = (id: any) => {
 };
 const selectArtList = async (item: number | string = '') => {
     articleType.value = item;
-    paginationObj.pageNum = 1;
+    paginationObj.pageNo = 1;
     articleList({ type: item });
     // 设置滚动条位置
     scrollHome();
@@ -143,7 +143,7 @@ const scrollHome = () => {
     homeDom.scrollTop = window.innerHeight - 65;
 };
 const onCurrentChange = async (value: number) => {
-    paginationObj.pageNum = value;
+    paginationObj.pageNo = value;
     await articleList({ type: articleType.value });
     await scrollHome();
 };
